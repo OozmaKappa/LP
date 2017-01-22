@@ -1,0 +1,26 @@
+{
+   "apps": [
+    {
+        "name": "GREEN",
+        "script": "./node_modules/.bin/gulp",
+        "args": "default",
+        "exec_mode": "fork",
+        "env": {
+          "NODE_ENV": "production",
+          "PORT": "3100"
+        },
+        "autorestart": true
+    },
+    {
+        "name": "BLUE",
+        "script": "./node_modules/.bin/gulp",
+        "args": "default",
+        "exec_mode": "fork",
+        "env": {
+          "NODE_ENV": "production",
+          "PORT": "3200"
+        },
+        "autorestart": true
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Signerica";
+    src: url("/static/Signerica_Fat.ttf");
+    src: url("/static/Signerica_Fat.ttf") format("truetype");
+    font-style: normal;
+}
+
+.main-container {
+    display: flex;
+    height: 90px;
+    width: 100%;
+    padding: 20px;
+    border-bottom: solid lightgrey 1px
+}
+
+.zeile1 {
+    font-family: "Signerica";
+    font-style: normal;
+    font-size: 18pt;
+}
+
+.navbar {
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    position: relative;
+}
+
+.level1 {
+    margin: 0 10px;
+}
+
+.level1.active,
+.level1:hover {
+    border-bottom: solid 1px
+}

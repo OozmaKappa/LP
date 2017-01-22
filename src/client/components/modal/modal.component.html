@@ -1,0 +1,15 @@
+<div class="cd-popup" [ngClass]="{'is-visible' : visible}" (click)="hide()" role="alert">
+    <div class="cd-popup-container" (click)="stopPropagation($event)">
+        <div class="cd-popup-header visible-xs-block visible-sm-block">
+            <div class="popup-close-container">
+                <i class="fa fa-times popup-close" (click)="hide()"></i>
+            </div>
+        </div>
+        <div class="popup-close-container hidden-xs hidden-sm">
+                <i class="fa fa-times popup-close" (click)="hide()"></i>
+            </div>
+        <div class="cd-popup-aligner">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

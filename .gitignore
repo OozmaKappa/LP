@@ -1,0 +1,15 @@
+.DS_Store
+.vscode
+.idea
+logs
+*.log
+pids
+*.pid
+*.seed
+lib-cov
+coverage
+.lock-wscript
+node_modules
+.env*.json
+.db*.json
+dist/
