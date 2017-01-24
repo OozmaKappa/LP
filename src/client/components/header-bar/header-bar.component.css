@@ -5,12 +5,23 @@
     font-style: normal;
 }
 
+a,
+a:focus,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
 .main-container {
     display: flex;
     height: 90px;
     width: 100%;
-    padding: 20px;
-    border-bottom: solid lightgrey 1px
+    padding: 20px 50px;
+    border-bottom: solid lightgrey 1px;
+    z-index: 1;
+    position: relative;
+    background-color: white;
 }
 
 .zeile1 {

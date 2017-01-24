@@ -14,13 +14,15 @@ import { AppComponent } from './app.component';
 import { HeaderBar } from './components/header-bar/header-bar.component';
 import { LandingPage } from './components/landing-page/landing-page.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { MouseWheelDirective } from './directives/mousewheel.directive';
 
 @NgModule({
     declarations: [
         AppComponent,
         HeaderBar,
         LandingPage,
-        ModalComponent
+        ModalComponent,
+        MouseWheelDirective
     ],
     imports: [
         BrowserModule,
