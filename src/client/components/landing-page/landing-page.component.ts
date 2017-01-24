@@ -29,13 +29,13 @@ export class LandingPage {
 
     onmousewheel(direction) {
         if (!this.scrollDirection) {
+            this.scrollDirection = this.scrollDirection ? this.scrollDirection : direction;
             this.activeContent = direction == 'up' ? Math.min(this.activeContent + 1, 2) : Math.max(this.activeContent - 1, 0);
             console.log(this.activeContent);
+            setTimeout(() => {
+                this.scrollDirection = '';
+            }, 1500);
         }
-        this.scrollDirection = this.scrollDirection ? this.scrollDirection : direction;
-        setTimeout(() => {
-            this.scrollDirection = '';
-        }, 2000);
         // console.log('up');
     }
 };
