@@ -5,7 +5,7 @@
             <!--<div class="left" [ngClass]="{'move-up': scrollDirection == 'up', 'move-down': scrollDirection == 'down'}">-->
             <div class="image content1" [class.active]="activeContent == 1" [ngClass]="{'up': activeContent > 1, 'down': activeContent < 1 }"></div>
             <div class="description col-md-8 content2" [class.active]="activeContent == 2" [ngClass]="{'up': activeContent > 2, 'down': activeContent < 2 }">
-                <div class="line1">WILLKOMMEN INS LEBEN2</div><br>
+                <div class="line1">WILLKOMMEN IM LEBEN</div><br>
                 <div class="line2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
                     et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
                 </div><br>
@@ -13,12 +13,13 @@
                     <a href="" class="btn btn-info">Show more</a>
                 </div><br>
             </div>
+            <div class="image content3" [class.active]="activeContent == 3" [ngClass]="{'up': activeContent > 3, 'down': activeContent < 3 }"></div>
             <!--</div>-->
         </div>
         <div class="col-md-6 right">
             <!--<div class="right" [ngClass]="{'move-down': scrollDirection == 'up', 'move-up': scrollDirection == 'down'}">-->
             <div class="description col-md-8 content1" [class.active]="activeContent == 1" [ngClass]="{'up': activeContent < 1, 'down': activeContent > 1}">
-                <div class="line1">WILLKOMMEN INS LEBEN</div><br>
+                <div class="line1">9 MONATE</div><br>
                 <div class="line2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
                     et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
                 </div><br>
@@ -27,6 +28,15 @@
                 </div><br>
             </div>
             <div class="image content2" [class.active]="activeContent == 2" [ngClass]="{'up': activeContent < 2, 'down': activeContent > 2}"></div>
+            <div class="description col-md-8 content3" [class.active]="activeContent == 3" [ngClass]="{'up': activeContent < 3, 'down': activeContent > 3}">
+                <div class="line1">KINDER</div><br>
+                <div class="line2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                </div><br>
+                <div class="line3">
+                    <a href="" class="btn btn-info">Show more</a>
+                </div><br>
+            </div>
             <!--</div>-->
         </div>
     </div>

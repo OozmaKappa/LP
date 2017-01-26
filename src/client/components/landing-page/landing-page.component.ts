@@ -30,7 +30,7 @@ export class LandingPage {
     onmousewheel(direction) {
         if (!this.scrollDirection) {
             this.scrollDirection = this.scrollDirection ? this.scrollDirection : direction;
-            this.activeContent = direction == 'up' ? Math.min(this.activeContent + 1, 2) : Math.max(this.activeContent - 1, 0);
+            this.activeContent = direction == 'up' ? Math.min(this.activeContent + 1, 3) : Math.max(this.activeContent - 1, 1);
             console.log(this.activeContent);
             setTimeout(() => {
                 this.scrollDirection = '';
