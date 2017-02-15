@@ -11,6 +11,7 @@ import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 // components
 import { AppComponent } from './app.component';
+import { Gallery } from './components/gallery/gallery.component';
 import { HeaderBar } from './components/header-bar/header-bar.component';
 import { LandingPage } from './components/landing-page/landing-page.component';
 import { ModalComponent } from './components/modal/modal.component';
@@ -21,6 +22,7 @@ import { MouseWheelDirective } from './directives/mousewheel.directive';
         AppComponent,
         HeaderBar,
         LandingPage,
+        Gallery,
         ModalComponent,
         MouseWheelDirective
     ],

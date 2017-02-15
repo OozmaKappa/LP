@@ -1,5 +1,4 @@
 <div class="main-container" mouseWheel (mouseWheelUp)="onmousewheel('up')" (mouseWheelDown)="onmousewheel('down')">
-    <header-bar></header-bar>
     <div class="row content-container">
         <div class="col-md-6 left">
             <!--<div class="left" [ngClass]="{'move-up': scrollDirection == 'up', 'move-down': scrollDirection == 'down'}">-->
@@ -24,7 +23,7 @@
                     et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
                 </div><br>
                 <div class="line3">
-                    <a href="" class="btn btn-info">Show more</a>
+                    <a routerLink="/gallery/9months" class="btn btn-info">Show more</a>
                 </div><br>
             </div>
             <div class="image content2" [class.active]="activeContent == 2" [ngClass]="{'up': activeContent < 2, 'down': activeContent > 2}"></div>
