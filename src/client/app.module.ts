@@ -38,7 +38,7 @@ import { MouseWheelDirective } from './directives/mousewheel.directive';
         Ng2PaginationModule,
         AlertModule,
         ButtonsModule,
-        DropdownModule,
+        DropdownModule.forRoot(),
         Ng2PageScrollModule.forRoot()
     ],
     providers: [

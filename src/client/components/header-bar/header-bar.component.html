@@ -5,7 +5,14 @@
     </div>
     <div class="navbar">
         <a class="level1" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" href="">Home</a>
-        <a class="level1" routerLink="/gallery" routerLinkActive="active" href="">Galleries</a>
+        <div dropdown>
+            <a class="level1" [class.active]="gallery.classList.contains('active')" dropdownToggle>Galleries</a>
+            <ul dropdownMenu role="menu" class="dropdown-menu dropdown-menu-center">
+                <li><a #gallery class="level2" routerLink="gallery/9months" routerLinkActive="active" href="">9months</a></li>
+                <li><a #gallery class="level2" routerLink="gallery/9months" routerLinkActive="active" href="">Willkommen im Leben</a></li>
+                <li><a #gallery class="level2" routerLink="gallery/9months" routerLinkActive="active" href="">Kinder</a></li>
+            </ul>
+        </div>
         <a class="level1" routerLink="/about" routerLinkActive="active" href="">About</a>
         <a class="level1" routerLink="/more" routerLinkActive="active" href="">More</a>
     </div>
