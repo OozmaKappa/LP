@@ -1,26 +1,26 @@
-<div class="col-xs-offset-2 col-xs-8">
-    <div class="row">
-        <div class="col-xs-12 horizontal-lg">
+<div class="gallery-container">
+    <div class="gallery-row">
+        <div class="horizontal-lg">
             <div *ngIf="galleryName" class="image" [ngStyle]="{ 'background-image': 'url(/static/'+galleryName+'/'+galleryName+ '_0.jpg)'}">
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-xs-7 horizontal-sm">
+    <div class="gallery-row">
+        <div class="square">
             <div *ngIf="galleryName" class="image" [ngStyle]="{ 'background-image': 'url(/static/'+galleryName+'/'+galleryName+ '_0.jpg)'}">
             </div>
         </div>
-        <div class="col-xs-5 vertical">
+        <div class="square">
             <div *ngIf="galleryName" class="image" [ngStyle]="{ 'background-image': 'url(/static/'+galleryName+'/'+galleryName+ '_0.jpg)'}">
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-xs-6 square">
+    <div class="gallery-row">
+        <div class="horizontal-sm">
             <div *ngIf="galleryName" class="image" [ngStyle]="{ 'background-image': 'url(/static/'+galleryName+'/'+galleryName+ '_0.jpg)'}">
             </div>
         </div>
-        <div class="col-xs-6 square">
+        <div class="vertical">
             <div *ngIf="galleryName" class="image" [ngStyle]="{ 'background-image': 'url(/static/'+galleryName+'/'+galleryName+ '_0.jpg)'}">
             </div>
         </div>

@@ -1,3 +1,15 @@
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-row {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
 .horizontal-lg,
 .horizontal-sm,
 .vertical,
@@ -10,10 +22,84 @@
 .horizontal-sm:after,
 .vertical:after,
 .square:after {
-    padding-top: 56.25%;
-    /* 16:9 ratio */
     display: block;
     content: '';
+}
+
+.horizontal-lg:after {
+    width: 1152px;
+    padding-top: 67%;
+    /* 3:2 ratio */
+}
+
+.horizontal-sm:after {
+    width: 768px;
+    padding-top: 67%;
+}
+
+.vertical:after {
+    width: 384px;
+}
+
+.square:after {
+    width: 576px;
+    padding-top: 100%;
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 1200px) {
+    .horizontal-lg:after {
+        width: 968px;
+    }
+    .horizontal-sm:after {
+        width: 646px;
+    }
+    .vertical:after {
+        width: 322px;
+    }
+    .square:after {
+        width: 484px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .horizontal-lg:after {
+        width: 744px;
+    }
+    .horizontal-sm:after {
+        width: 496px;
+    }
+    .vertical:after {
+        width: 248px;
+        padding-top: 150%;
+    }
+    .square:after {
+        width: 377px;
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {
+    .horizontal-lg:after {
+        width: 90vw;
+    }
+    .horizontal-sm:after {
+        width: 90vw;
+    }
+    .vertical:after {
+        width: 90vw;
+        padding-top: 150%;
+    }
+    .square:after {
+        width: 90vw;
+    }
+    .gallery-row {
+        flex-direction: column;
+    }
 }
 
 
@@ -34,4 +120,15 @@
     background-position: right bottom;
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 10px
 }
+
+
+/*
+hoch
+5760x3840
+
+quer
+
+
+*/

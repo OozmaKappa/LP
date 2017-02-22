@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MomentModule } from 'angular2-moment';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { routing } from './app.routes';
-import { TooltipModule, AlertModule, ButtonsModule, DropdownModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { TooltipModule, AlertModule, ButtonsModule, DropdownModule } from 'ng2-bootstrap';
 import { Ng2PaginationModule } from 'ng2-pagination';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
