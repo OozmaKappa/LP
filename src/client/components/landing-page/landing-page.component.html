@@ -1,5 +1,6 @@
+<!--<div [@delay]="test">-->
 <div class="main-container" mouseWheel (mouseWheelUp)="onmousewheel('up')" (mouseWheelDown)="onmousewheel('down')">
-    <div class="row content-container">
+    <div class="row content-container" [@fadeInOut]="true">
         <div class="col-md-6 left">
             <!--<div class="left" [ngClass]="{'move-up': scrollDirection == 'up', 'move-down': scrollDirection == 'down'}">-->
             <div class="image content1" [class.active]="activeContent == 1" [ngClass]="{'up': activeContent > 1, 'down': activeContent < 1 }"></div>
@@ -41,3 +42,4 @@
     </div>
     <div class=""></div>
 </div>
+<!--</div>-->

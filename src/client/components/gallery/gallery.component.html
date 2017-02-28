@@ -1,4 +1,4 @@
-<div class="gallery-container">
+<div class="gallery-container" [@fadeInOut]="test">
     <div class="gallery-row">
         <div class="horizontal-lg">
             <div *ngIf="galleryName" class="image" [ngStyle]="{ 'background-image': 'url(/static/'+galleryName+'/'+galleryName+ '_0.jpg)'}">
