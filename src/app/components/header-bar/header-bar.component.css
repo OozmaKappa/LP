@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Signerica";
+  src: url("/assets/Signerica_Fat.ttf");
+  src: url("/assets/Signerica_Fat.ttf") format("truetype");
+  font-style: normal;
+}
+
+a,
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+.main-container {
+  display: flex;
+  height: 90px;
+  width: 100%;
+  padding: 20px 50px;
+  border-bottom: solid lightgrey 1px;
+  z-index: 1;
+  position: relative;
+  background-color: white;
+}
+
+.zeile1 {
+  font-family: "Signerica";
+  font-style: normal;
+  font-size: 18pt;
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+  position: relative;
+}
+
+.level1 {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.level1.active,
+.level1:hover {
+  border-bottom: solid 1px
+}
+
+.dropdown-menu {
+  min-width: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+  border: none;
+}
+
+.dropdown-menu-center {
+  left: -50px;
+  right: -50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}

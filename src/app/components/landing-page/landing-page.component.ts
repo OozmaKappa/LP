@@ -8,22 +8,22 @@ import { Component } from '@angular/core';
 export class LandingPage {
     content = [{
         title: '9 Months',
-        imageUrl: '/static/9months1.jpg',
+        imageUrl: '/assets/9months1.jpg',
         description: `„A grand adventure is about to begin...“`,
         route: '/gallery/9months'
     }, {
         title: 'Newborn',
-        imageUrl: '/static/newborn1.jpg',
+        imageUrl: '/assets/newborn1.jpg',
         description: `We take photos as a return ticket to a moment otherwise gone. Katie Thurmes`,
         route: '/gallery/9months'
     }, {
         title: 'Children',
-        imageUrl: '/static/children1.jpg',
+        imageUrl: '/assets/children1.jpg',
         description: `Photography is the memory of our lives.`,
         route: '/gallery/9months'
     }, {
         title: 'Portrait',
-        imageUrl: '/static/children1.jpg',
+        imageUrl: '/assets/children1.jpg',
         description: `Photography is about capturing souls, not smiles.`,
         route: '/gallery/9months'
     }]
