@@ -14,7 +14,7 @@ export class LandingPage {
     }, {
         title: 'Newborn',
         imageUrl: '/static/newborn1.jpg',
-        description: `We take photos as a return ticket to a moment otherwise gone.<br/>Katie Thurmes`,
+        description: `We take photos as a return ticket to a moment otherwise gone. Katie Thurmes`,
         route: '/gallery/9months'
     }, {
         title: 'Children',
