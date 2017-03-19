@@ -7,8 +7,9 @@
             <div *ngIf="i % 2 != 0" class="description col-md-8 content" [class.active]="activeContent === i" [ngClass]="{'up': activeContent > i, 'down': activeContent < i }">
                 <div class="line1">{{c.title}}</div><br>
                 <div class="line2">{{c.description}}</div><br>
-                <div class="line3" *ngIf="c.route">
-                    <a routerLink="{{c.route}}" class="btn btn-info">Show more</a>
+                <div class="line3" *ngIf="c.route || c.navigate">
+                    <a *ngIf="c.route" routerLink="{{c.route}}" class="btn btn-info">Show more</a>
+                    <a *ngIf="c.navigate" (click)="activeContent = c.navigate" class="btn btn-info">Show more</a>
                 </div><br>
             </div>
         </div>
@@ -20,12 +21,16 @@
         <div *ngIf="i % 2 == 0" class="description col-md-8 content" [class.active]="activeContent === i" [ngClass]="{'up': activeContent < i, 'down': activeContent > i }">
             <div class="line1">{{c.title}}</div><br>
             <div class="line2">{{c.description}}</div><br>
-            <div class="line3" *ngIf="c.route">
-                <a routerLink="{{c.route}}" class="btn btn-info">Show more</a>
+            <div class="line3" *ngIf="c.route || c.navigate">
+                <a *ngIf="c.route" routerLink="{{c.route}}" class="btn btn-info">Show more</a>
+                <a *ngIf="c.navigate" (click)="activeContent = c.navigate" class="btn btn-info">Show more</a>
             </div><br>
         </div>
     </div>
 </div>
 </div>
-<div class=""></div>
+<div class="dots">
+    <i class="fa" aria-hidden="true" *ngFor="let c of content; let i = index" [ngClass]="{'fa-circle-o': activeContent !== i, 'fa-circle': activeContent === i, 'white': activeContent%2 }"
+        (click)="activeContent = i"></i>
+</div>
 </div>

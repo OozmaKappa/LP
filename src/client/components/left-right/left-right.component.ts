@@ -57,6 +57,7 @@ export class LeftRightComponent {
     }
 
     onMouseWheel(direction) {
+        console.log(direction);
         if (!this.scrollDirection) {
             this.scrollDirection = this.scrollDirection ? this.scrollDirection : direction;
             this.activeContent = direction == 'up' ? Math.min(this.activeContent + 1, this.content.length - 1) : Math.max(this.activeContent - 1, 0);

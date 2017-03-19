@@ -7,22 +7,24 @@ import { Component } from '@angular/core';
 })
 export class LandingPage {
     content = [{
-        title: '9 MONATE',
+        title: '9 Months',
         imageUrl: '/static/9months1.jpg',
-        description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum`,
+        description: `„A grand adventure is about to begin...“`,
         route: '/gallery/9months'
     }, {
-        title: 'WILLKOMMEN IM LEBEN',
+        title: 'Newborn',
         imageUrl: '/static/newborn1.jpg',
-        description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum`,
+        description: `We take photos as a return ticket to a moment otherwise gone.<br/>Katie Thurmes`,
         route: '/gallery/9months'
     }, {
-        title: 'KINDER',
+        title: 'Children',
         imageUrl: '/static/children1.jpg',
-        description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum`,
+        description: `Photography is the memory of our lives.`,
+        route: '/gallery/9months'
+    }, {
+        title: 'Portrait',
+        imageUrl: '/static/children1.jpg',
+        description: `Photography is about capturing souls, not smiles.`,
         route: '/gallery/9months'
     }]
     constructor() {

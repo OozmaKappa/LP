@@ -105,3 +105,37 @@ body {
     border-color: black;
     background-color: white;
 }
+
+.btn-info.active.focus,
+.btn-info.active:focus,
+.btn-info.active:hover,
+.btn-info:active.focus,
+.btn-info:active:focus,
+.btn-info:active:hover,
+.open>.dropdown-toggle.btn-info.focus,
+.open>.dropdown-toggle.btn-info:focus,
+.open>.dropdown-toggle.btn-info:hover {
+    color: #fff;
+    background-color: #C7C7C7;
+    border-color: #000000;
+}
+
+.dots {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dots>i {
+    margin: 2px;
+    color: #6b6b6b;
+    cursor: pointer;
+}
+
+.white {
+    color: white;
+}
