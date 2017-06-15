@@ -24,6 +24,20 @@ a:hover {
   background-color: white;
 }
 
+.logo{
+  position: absolute;
+  top: 0;
+}
+
+.logo .image {
+  background-image: url("/assets/Logo.jpeg");
+  height: 89px;
+  width: 269px;
+  background-position: right bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .zeile1 {
   font-family: "Signerica";
   font-style: normal;
