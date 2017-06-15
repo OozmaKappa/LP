@@ -1,9 +1,27 @@
-import { Component, Input, HostListener, Inject, trigger, state, style, transition, animate } from '@angular/core';
+import { Component, Input, HostListener, Inject } from '@angular/core';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 import { ActivatedRoute, NavigationStart, Router, Params } from '@angular/router';
 import { DOCUMENT } from '@angular/platform-browser';
 
-function fadeInOut() {
-    return trigger('fadeInOut', [
+// function fadeInOut() {
+//     return trigger('fadeInOut', [
+//         state('void', style({ opacity: 0 })),
+//         state('*', style({ opacity: 1.0 })),
+//         transition(':leave', [  // before 2.1: transition('* => void', [
+//             style({ opacity: 1.0 }),
+//             animate('0.8s ease-out', style({ opacity: 0 }))
+//         ]),
+//         transition(':enter', [  // before 2.1: transition('void => *', [
+//             style({ opacity: 0 }),
+//             animate('0.8s ease-in-out', style({ opacity: 1.0 }))
+//         ]),
+//     ]);
+// }
+@Component({
+    selector: 'left-right',
+    templateUrl: './left-right.component.html',
+    styleUrls: ['./left-right.component.css'],
+    animations: [trigger('fadeInOut', [
         state('void', style({ opacity: 0 })),
         state('*', style({ opacity: 1.0 })),
         transition(':leave', [  // before 2.1: transition('* => void', [
@@ -14,13 +32,8 @@ function fadeInOut() {
             style({ opacity: 0 }),
             animate('0.8s ease-in-out', style({ opacity: 1.0 }))
         ]),
-    ]);
-}
-@Component({
-    selector: 'left-right',
-    templateUrl: './left-right.component.html',
-    styleUrls: ['./left-right.component.css'],
-    animations: [fadeInOut()]
+    ])]
+    // animations: [fadeInOut()]
 })
 export class LeftRightComponent {
     @Input() content

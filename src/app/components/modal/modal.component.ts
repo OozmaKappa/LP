@@ -18,7 +18,7 @@ export class ModalComponent {
     this.visible = false;
   }
 
-  private stopPropagation(event) {
+  stopPropagation(event) {
     if (event.stopPropagation) {
       event.stopPropagation();
     } else {

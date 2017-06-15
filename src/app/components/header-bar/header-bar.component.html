@@ -6,7 +6,8 @@
     <div class="navbar">
         <a class="level1" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" href="">Home</a>
         <div dropdown>
-            <a class="level1" [class.active]="gallery && gallery.classList.contains('active')" dropdownToggle>Galleries</a>
+            <a class="level1" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" dropdownToggle>Galleries</a>
+            <!--<a class="level1" [class.active]="gallery && gallery.classList.contains('active')" dropdownToggle>Galleries</a>-->
             <ul *dropdownMenu role="menu" class="dropdown-menu dropdown-menu-center">
                 <li><a #gallery class="level2" routerLink="gallery/9months" routerLinkActive="active" href="">9months</a></li>
                 <li><a #gallery class="level2" routerLink="gallery/9months" routerLinkActive="active" href="">Willkommen im Leben</a></li>
