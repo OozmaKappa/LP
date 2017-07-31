@@ -1,8 +1,44 @@
 <div id="root-container">
-  <div class="header">
+  <div class="container notready" *ngIf="host === 'localhost'">
+    <div class="row">
+      <div class="logo"><img src="/assets/logo.png" alt=""></div>
+      <h2>Paar, Neugeborenen &amp; Familien Lifestyle-Fotografie</h2>
+      <br>
+    </div>
+    <div class="row">
+      <p class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">Shootingtermine gerne auf Anfrage: <br>Tel.: 07251 322 63 52 <br>E-Mail: katrin<!-- @.d<  -->.kharitonov<!-- .@>  -->@<!-- .><@  -->gm<!-- .><@  -->ail.c<!-- ...!@.d<  -->om
+      </p>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+      <p class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">
+        Schön, dass du hier bist!
+      </p>
+      <p class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">
+        Meine Website befindet sich noch im Aufbau. In ein paar Monaten gibt es hier mehr zu sehen – wiederkommen lohnt sich!
+      </p>
+      <p class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">
+        Lass uns bis dahin in Verbindung bleiben!
+      </p>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-xs-offset-2 col-xs-8 col-sm-offset-4 col-sm-4 link">
+        <a href="https://www.facebook.com/Leben-Pur-Fotografie-1793261230989815/" class="fa fa-facebook-square fa-2x"></a>
+        <a href="https://www.instagram.com/katrinkharitonov/" class="fa fa-instagram fa-2x"></a>
+      </div>
+    </div>
+    <!-- <div class="row footer">
+      <p class="col-xs-offset-2 col-xs-8">Shootingtermine gerne auf Anfrage: Tel.: 07251 322 63 52 E-Mail: katrin.kharitonov@gmail.com </p>
+    </div> -->
+  </div>
+
+  <div class="header" *ngIf="host !== 'localhost'">
     <header-bar></header-bar>
   </div>
-  <div class="main-content">
+  <div class="main-content" *ngIf="host !== 'localhost'">
     <router-outlet></router-outlet>
   </div>
 </div>
