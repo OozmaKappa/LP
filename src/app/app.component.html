@@ -1,5 +1,5 @@
 <div id="root-container">
-  <div class="container notready" *ngIf="host === 'localhost'">
+  <div class="container notready" *ngIf="host !== 'localhost'">
     <div class="row">
       <div class="logo"><img src="/assets/logo.png" alt=""></div>
       <h2>Paar, Neugeborenen &amp; Familien Lifestyle-Fotografie</h2>
@@ -35,10 +35,10 @@
     </div> -->
   </div>
 
-  <div class="header" *ngIf="host !== 'localhost'">
+  <div class="header" *ngIf="host === 'localhost'">
     <header-bar></header-bar>
   </div>
-  <div class="main-content" *ngIf="host !== 'localhost'">
+  <div class="main-content" *ngIf="host === 'localhost'">
     <router-outlet></router-outlet>
   </div>
 </div>
