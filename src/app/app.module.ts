@@ -13,23 +13,25 @@ import { TooltipModule, AlertModule, ButtonsModule, BsDropdownModule } from 'ng2
 // components
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
-import { Gallery } from './components/gallery/gallery.component';
-import { HeaderBar } from './components/header-bar/header-bar.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { HeaderBarComponent } from './components/header-bar/header-bar.component';
 import { LandingPage } from './components/landing-page/landing-page.component';
 import { LeftRightComponent } from './components/left-right/left-right.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { MouseWheelDirective } from './directives/mousewheel.directive';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
     declarations: [
         AboutComponent,
         AppComponent,
-        HeaderBar,
+        HeaderBarComponent,
         LandingPage,
         LeftRightComponent,
-        Gallery,
+        GalleryComponent,
         ModalComponent,
-        MouseWheelDirective
+        MouseWheelDirective,
+        NavbarComponent,
     ],
     imports: [
         BrowserModule,

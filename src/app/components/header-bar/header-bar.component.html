@@ -1,19 +1,6 @@
 <div class="main-container">
-    <div class="logo">
-        <div class="image"></div>
-    </div>
-    <div class="navbar">
-        <a class="level1" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" href="">Home</a>
-        <div dropdown>
-            <a class="level1" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" dropdownToggle>Galleries</a>
-            <!--<a class="level1" [class.active]="gallery && gallery.classList.contains('active')" dropdownToggle>Galleries</a>-->
-            <ul *dropdownMenu role="menu" class="dropdown-menu dropdown-menu-center">
-                <li><a #gallery class="level2" routerLink="gallery/9months" routerLinkActive="active" href="">9months</a></li>
-                <li><a #gallery class="level2" routerLink="gallery/9months" routerLinkActive="active" href="">Willkommen im Leben</a></li>
-                <li><a #gallery class="level2" routerLink="gallery/9months" routerLinkActive="active" href="">Kinder</a></li>
-            </ul>
-        </div>
-        <a class="level1" routerLink="/about" routerLinkActive="active" href="">About</a>
-        <a class="level1" routerLink="/more" routerLinkActive="active" href="">More</a>
-    </div>
+  <div class="logo">
+    <div class="image"></div>
+  </div>
+  <app-navbar></app-navbar>
 </div>

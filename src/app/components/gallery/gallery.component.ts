@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 
@@ -17,7 +17,7 @@ import { ActivatedRoute, Router, Params } from '@angular/router';
 //     ]);
 // }
 @Component({
-    selector: 'gallery',
+    selector: 'app-gallery',
     templateUrl: './gallery.component.html',
     styleUrls: ['./gallery.component.css'],
     // animations: [fadeInOut()],
@@ -32,14 +32,14 @@ import { ActivatedRoute, Router, Params } from '@angular/router';
             style({ opacity: 0 }),
             animate('1s ease-in-out', style({ opacity: 1.0 }))
         ]),
-    ])],
-    host: {
-        '[@fadeInOut]': 'true',
-        'style': 'display: block;'
-    }
+    ])]
+    // host: {
+    //     '[@fadeInOut]': 'true',
+    //     'style': 'display: block;'
+    // }
 })
 
-export class Gallery {
+export class GalleryComponent {
     galleryName: string;
     constructor(private route: ActivatedRoute, private router: Router) {
     }

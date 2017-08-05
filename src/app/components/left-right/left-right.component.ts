@@ -38,8 +38,8 @@ import { DOCUMENT } from '@angular/platform-browser';
 export class LeftRightComponent {
     @Input() content
 
-    scrollDirection: string = '';
-    activeContent: number = 0;
+    scrollDirection = '';
+    activeContent = 0;
     constructor( @Inject(DOCUMENT) private document: Document, private route: ActivatedRoute, private router: Router) {
     }
 
@@ -58,9 +58,9 @@ export class LeftRightComponent {
     //     });
     // }
 
-    @HostListener("window:scroll", [])
+    @HostListener('window:scroll', [])
     onWindowScroll(event) {
-        let number = this.document.body.scrollTop;
+        const number = this.document.body.scrollTop;
         if (number > 100) {
             // this.navIsFixed = true;
             // } else if (this.navIsFixed && number < 10) {
@@ -73,10 +73,10 @@ export class LeftRightComponent {
         console.log(direction);
         if (!this.scrollDirection) {
             this.scrollDirection = this.scrollDirection ? this.scrollDirection : direction;
-            this.activeContent = direction == 'up' ? Math.min(this.activeContent + 1, this.content.length - 1) : Math.max(this.activeContent - 1, 0);
+            this.activeContent = direction === 'up' ? Math.min(this.activeContent + 1, this.content.length - 1) : Math.max(this.activeContent - 1, 0);
             setTimeout(() => {
                 this.scrollDirection = '';
             }, 1500);
         }
     }
-};
+}
