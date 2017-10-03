@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 
@@ -39,7 +39,7 @@ import { ActivatedRoute, Router, Params } from '@angular/router';
     // }
 })
 
-export class GalleryComponent {
+export class GalleryComponent implements OnInit {
     galleryName: string;
     constructor(private route: ActivatedRoute, private router: Router) {
     }

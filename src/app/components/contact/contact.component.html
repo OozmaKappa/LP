@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="center-vertical">
+                <h3>Kurzer Draht</h3>
+                <p>Du hast Frage, Wünsche, möchtest einen Shootingtermin vereinbaren oder einen Gutschein erwerben?</p>
+                <p>Ich melde mich schnell und unkompliziert. Gerne per E-Mail, Telefon, WhatsApp.</p>
+                <br/>
+                <h4>Katrin Kharitonov</h4>
+                <p>
+                    <br> Paar, Neugeborenen & Familien<br> Lifestyle-Fotografin
+                    <br>
+                    <br> Buhlweg 7 76689 Karlsdorf-Neuthard<br>
+                    <br> T +49 (0)7251 322 63 52 E info@lebenpurfotografie.de
+                </p>
+                <p>Ich freue mich auf dich!</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="center-vertical">
+                <h3>Fragen kostet nichts</h3>
+                <p>Du möchtest ein konkretes Angebot? Gerne!</p>
+                <br/>
+                <br/>
+                <h4>Schreib mir!</h4>
+                <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Dein Name" formControlName="name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Deine E-Mail Adresse" formControlName="email">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Deine Nachricht" formControlName="message" rows="10"> </textarea>
+                    </div>
+                    <button type="submit" [disabled]="form.invalid" class="btn btn-default pull-right">Anfrage Senden</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -9,6 +9,9 @@ import { routing } from './app.routes';
 import { TooltipModule, AlertModule, ButtonsModule, BsDropdownModule } from 'ng2-bootstrap';
 // import { Ng2PaginationModule } from 'ng2-pagination';
 // import { Ng2PageScrollModule } from 'ng2-page-scroll';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
 
 // components
 import { AppComponent } from './app.component';
@@ -20,6 +23,7 @@ import { LeftRightComponent } from './components/left-right/left-right.component
 import { ModalComponent } from './components/modal/modal.component';
 import { MouseWheelDirective } from './directives/mousewheel.directive';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
     declarations: [
@@ -32,6 +36,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
         ModalComponent,
         MouseWheelDirective,
         NavbarComponent,
+        ContactComponent,
     ],
     imports: [
         BrowserModule,
@@ -46,8 +51,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
         // Ng2PaginationModule,
         AlertModule,
         ButtonsModule,
-        BsDropdownModule.forRoot()
+        BsDropdownModule.forRoot(),
         // Ng2PageScrollModule.forRoot()
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFireDatabaseModule,
     ],
     providers: [
     ],

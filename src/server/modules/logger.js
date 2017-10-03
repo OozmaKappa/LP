@@ -1,26 +1,25 @@
 class Logger {
-    constructor() {
-        let winston = require('winston');
-        let sentry = require('winston-sentry');
+  constructor() {
+    let winston = require('winston');
 
-        let logger = new winston.Logger({
-            transports: [
-                new winston.transports.Console({
-                    timestamp: true,
-                    colorize: false,
-                    level: 'verbose',
-                    handleExceptions: true,
-                    humanReadableUnhandledException: true
-                })
-            ]
-        });
+    let logger = new winston.Logger({
+      transports: [
+        new winston.transports.Console({
+          timestamp: true,
+          colorize: false,
+          level: 'verbose',
+          handleExceptions: true,
+          humanReadableUnhandledException: true
+        })
+      ]
+    });
 
-        process.on('unhandledRejection', error => {
-            logger.error('UNHANDLED REJECTION', error.stack);
-        });
+    process.on('unhandledRejection', error => {
+      logger.error('UNHANDLED REJECTION', error.stack);
+    });
 
-        return logger;
-    }
+    return logger;
+  }
 }
 
 module.exports = Logger;

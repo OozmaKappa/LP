@@ -24,6 +24,10 @@ a:hover {
   position: relative;
 }
 
+nav>button {
+  margin: auto;
+}
+
 @media(min-width: 768px) {
   .nav-links {
     align-items: center;
@@ -42,7 +46,9 @@ a:hover {
 .level1:hover {
   border-bottom: solid 1px
 }
-
+.gallery-dropdown{
+    display: inline-block
+}
 .dropdown-menu {
   min-width: 50px;
   background: rgba(255, 255, 255, 0.2);
