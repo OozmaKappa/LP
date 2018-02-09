@@ -5,10 +5,11 @@ body {
 .main-container {
   display: flex;
   flex-direction: column;
-  height: 101%;
+  height: 100%;
   width: 100%;
   position: absolute;
   overflow: hidden;
+  padding-left: 0;
 }
 
 .content-container {
@@ -49,16 +50,21 @@ body {
   transition: opacity 0.6s ease-in, top 1s ease-in-out;
 }
 
+.content-wrapper {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
 .image {
   height: 100vh;
   width: 100%;
-  background-position: right bottom;
+  background-position: left bottom;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.left .image {
-  background-position: left bottom;
+.right .image {
+  background-position: right bottom;
 }
 
 .description {
@@ -98,11 +104,11 @@ body {
 .btn-info:active.focus,
 .btn-info:active:focus,
 .btn-info:active:hover,
-.open>.dropdown-toggle.btn-info.focus,
-.open>.dropdown-toggle.btn-info:focus,
-.open>.dropdown-toggle.btn-info:hover {
+.open > .dropdown-toggle.btn-info.focus,
+.open > .dropdown-toggle.btn-info:focus,
+.open > .dropdown-toggle.btn-info:hover {
   color: #fff;
-  background-color: #C7C7C7;
+  background-color: #c7c7c7;
   border-color: #000000;
 }
 
@@ -116,7 +122,7 @@ body {
   justify-content: center;
 }
 
-.dots>i {
+.dots > i {
   margin: 2px;
   color: #6b6b6b;
   cursor: pointer;

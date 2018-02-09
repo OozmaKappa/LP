@@ -1,6 +1,6 @@
 <div class="main-container container" mouseWheel (mouseWheelUp)="onMouseWheel('down')" (mouseWheelDown)="onMouseWheel('up')">
     <!-- <div class="row content-container" [@fadeInOut]="true"> -->
-    <div class="row content-container">
+    <div class="row content-container hidden-xs">
         <div class="col-md-6 left">
             <div *ngFor="let c of content; let i = index">
                 <div *ngIf="i % 2 == 0" class="image content" [class.active]="activeContent === i" [style.background-image]="getImage(c)"
@@ -33,6 +33,25 @@
                     </div>
                     <br>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="visible-xs">
+        <div *ngFor="let c of content; let i = index">
+            <div class="image content" [class.active]="activeContent === i" [style.background-image]="getImage(c)" [ngClass]="{'down': activeContent > i, 'up': activeContent < i }"></div>
+            <div class="description col-md-8 content" [class.active]="activeContent === i" [ngClass]="{'down': activeContent < i, 'up': activeContent > i }">
+                <span class="content-wrapper">
+
+                    <div class="line1">{{c.title}}</div>
+                    <br>
+                    <div class="line2" [innerHTML]="c.description"></div>
+                </span>
+                <br>
+                <div class="line3" *ngIf="c.route || c.navigate">
+                    <a *ngIf="c.route" routerLink="{{c.route}}" class="btn btn-info">Show more</a>
+                    <a *ngIf="c.navigate" (click)="activeContent = c.navigate" class="btn btn-info">Show more</a>
+                </div>
+                <br>
             </div>
         </div>
     </div>
