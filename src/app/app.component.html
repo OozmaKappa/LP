@@ -1,6 +1,5 @@
 <div id="root-container">
-    <div class="container notready" *ngIf="1 === 2">
-        <!-- <div class="container notready" *ngIf="host !== 'localhost'"> -->
+    <div class="container notready" *ngIf="host !== 'localhost'">
         <!-- <div class="container notready"> -->
         <div class="row">
             <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">
@@ -54,12 +53,10 @@
         </div>
     </div>
 
-    <!-- <div class="header" *ngIf="host === 'localhost'"> -->
-    <div class="header" *ngIf="true">
+    <div class="header" *ngIf="host === 'localhost'">
         <app-header-bar></app-header-bar>
     </div>
-    <!-- <div class="main-content" *ngIf="host === 'localhost'"> -->
-    <div class="main-content" *ngIf="true">
+    <div class="main-content" *ngIf="host === 'localhost'">
         <router-outlet></router-outlet>
     </div>
 </div>
