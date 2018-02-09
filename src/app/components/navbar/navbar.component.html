@@ -1,21 +1,42 @@
 <nav class="mobile-collaps">
-    <button type="button" class="navbar-toggle collapsed" (click)="toggleState()">
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" (click)="toggleState()">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="fa fa-2x fa-bars"></span>
             </button>
-    <div class="nav-links collapse navbar-collapse" [ngClass]="{'in': isIn}">
-        <a class="level1" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" href="">Home</a>
-        <div dropdown class="gallery-dropdown">
-            <a class="level1" routerLinkActive="active" [routerLinkActiveOptions]="{exact:false}" dropdownToggle>Galleries</a>
-            <!--<a class="level1" [class.active]="gallery && gallery.classList.contains('active')" dropdownToggle>Galleries</a>-->
-            <ul *dropdownMenu role="menu" class="dropdown-menu dropdown-menu-center">
-                <li><a #gallery class="level2" routerLink="gallery/9months" routerLinkActive="active" href="">9months</a></li>
-                <li><a #gallery class="level2" routerLink="gallery/9months" routerLinkActive="active" href="">Willkommen im Leben</a></li>
-                <li><a #gallery class="level2" routerLink="gallery/9months" routerLinkActive="active" href="">Kinder</a></li>
+        </div>
+        <div class="nav-links collapse navbar-collapse" [ngClass]="{'in': isIn}">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a class="level1" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" href="" (click)="toggleState()">Home</a>
+                </li>
+                <li class="dropdown" [routerLinkActive]="['active']" dropdown class="gallery-dropdown">
+                    <a class="level1" dropdownToggle>Galleries</a>
+                    <!--<a class="level1" [class.active]="gallery && gallery.classList.contains('active')" dropdownToggle>Galleries</a>-->
+                    <ul *dropdownMenu role="menu" class="dropdown-menu dropdown-menu-center">
+                        <li>
+                            <a #gallery class="level2" routerLink="gallery/9months" routerLinkActive="active" href="" (click)="toggleState()">9months</a>
+                        </li>
+                        <li>
+                            <a #gallery class="level2" routerLink="gallery/9months" routerLinkActive="active" href="" (click)="toggleState()">Willkommen im Leben</a>
+                        </li>
+                        <li>
+                            <a #gallery class="level2" routerLink="gallery/9months" routerLinkActive="active" href="" (click)="toggleState()">Kinder</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="level1" routerLink="/about" routerLinkActive="active" href="" (click)="toggleState()">About</a>
+                </li>
+                <li>
+                    <a class="level1" routerLink="/contact" routerLinkActive="active" href="" (click)="toggleState()">Kontakt</a>
+                </li>
+                <li>
+                    <a class="level1" routerLink="/more" routerLinkActive="active" href="" (click)="toggleState()">More</a>
+                </li>
             </ul>
         </div>
-        <a class="level1" routerLink="/about" routerLinkActive="active" href="">About</a>
-        <a class="level1" routerLink="/contact" routerLinkActive="active" href="">Kontakt</a>
-        <a class="level1" routerLink="/more" routerLinkActive="active" href="">More</a>
     </div>
 </nav>

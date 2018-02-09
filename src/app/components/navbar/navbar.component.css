@@ -20,21 +20,18 @@ a:hover {
 }
 
 .mobile-collaps {
-  margin-left: auto;
-  position: relative;
+  position: absolute;
+  width: 100%;
+  top: 15px;
+  right: 0;
 }
 
-nav>button {
+nav > button {
   margin: auto;
 }
 
-@media(min-width: 768px) {
-  .nav-links {
-    align-items: center;
-    display: flex;
-    margin-left: auto;
-    position: relative;
-  }
+.collapse {
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .level1 {
@@ -42,13 +39,21 @@ nav>button {
   cursor: pointer;
 }
 
+.nav .open > a:hover {
+  border-color: black;
+}
+
+li.active > .level1,
 .level1.active,
 .level1:hover {
-  border-bottom: solid 1px
+  border-bottom: solid 1px;
 }
-.gallery-dropdown{
-    display: inline-block
+
+.gallery-dropdown {
+  display: inline-block;
+  width: 100%;
 }
+
 .dropdown-menu {
   min-width: 50px;
   background: rgba(255, 255, 255, 0.2);
@@ -57,9 +62,33 @@ nav>button {
 }
 
 .dropdown-menu-center {
-  left: -50px;
-  right: -50px;
+  left: 25px;
+  /* right: -50px; */
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .mobile-collaps {
+    margin-left: auto;
+    position: relative;
+  }
+
+  .nav > li > a {
+    padding: unset;
+    display: inherit;
+  }
+
+  .nav-links {
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    position: relative;
+  }
+
+  .gallery-dropdown {
+    display: inline-block;
+    width: unset;
+  }
 }

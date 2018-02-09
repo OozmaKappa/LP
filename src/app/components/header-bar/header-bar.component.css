@@ -1,18 +1,12 @@
 .main-container {
-  display: flex;
-  height: 90px;
+  display: inline-block;
+  min-height: 90px;
   width: 100%;
   padding: 20px 50px;
   border-bottom: solid lightgrey 1px;
   z-index: 1;
   position: relative;
   background-color: white;
-}
-
-.logo {
-  position: absolute;
-  /* top: 0; */
-  width: 100%;
 }
 
 .logo .image {
@@ -25,17 +19,30 @@
 }
 
 app-navbar {
-  margin-left: auto;
-  position: relative;
+  /* position: absolute; */
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   /* .mobile-collaps {
-    margin-left: 10px;
-  } */
-  .logo {
-    top: 0
+        margin-left: 10px;
+    } */
+
+  .main-container {
+    height: 90px;
+    display: flex;
   }
+
+  app-navbar {
+    margin-left: auto;
+    position: relative;
+  }
+
+  .logo {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
   .logo .image {
     width: 269px;
     height: 89px;
