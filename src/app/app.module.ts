@@ -6,7 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { MomentModule } from 'angular2-moment';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { routing } from './app.routes';
-import { TooltipModule, AlertModule, ButtonsModule, BsDropdownModule } from 'ng2-bootstrap';
+import { TooltipModule, AlertModule, ButtonsModule, BsDropdownModule, setTheme } from 'ngx-bootstrap';
 // import { Ng2PaginationModule } from 'ng2-pagination';
 // import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { AngularFireModule } from 'angularfire2';
@@ -61,4 +61,8 @@ import { ContactComponent } from './components/contact/contact.component';
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+    constructor() {
+        setTheme('bs4'); // or 'bs4'
+    }
+}
