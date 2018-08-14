@@ -18,7 +18,7 @@ import { DOCUMENT } from '@angular/platform-browser';
 //     ]);
 // }
 @Component({
-    selector: 'left-right',
+    selector: 'app-left-right',
     templateUrl: './left-right.component.html',
     styleUrls: ['./left-right.component.css'],
     animations: [trigger('fadeInOut', [
@@ -40,11 +40,7 @@ export class LeftRightComponent {
 
     scrollDirection = '';
     activeContent = 0;
-    constructor( @Inject(DOCUMENT) private document: Document, private route: ActivatedRoute, private router: Router) {
-    }
-
-    ngOnChanges() {
-        console.log(this.route);
+    constructor(@Inject(DOCUMENT) private document: Document, private route: ActivatedRoute, private router: Router) {
     }
 
     getImage(content) {
@@ -73,6 +69,7 @@ export class LeftRightComponent {
         console.log(direction);
         if (!this.scrollDirection) {
             this.scrollDirection = this.scrollDirection ? this.scrollDirection : direction;
+            // tslint:disable-next-line:max-line-length
             this.activeContent = direction === 'up' ? Math.min(this.activeContent + 1, this.content.length - 1) : Math.max(this.activeContent - 1, 0);
             setTimeout(() => {
                 this.scrollDirection = '';

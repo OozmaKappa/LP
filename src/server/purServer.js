@@ -1,4 +1,3 @@
-let fs = require('fs');
 let path = require('path');
 let Config = require('./purConfig');
 let Logger = require('./modules/logger');
@@ -21,9 +20,13 @@ class PurServer {
         app.use(express.static(path.join(__dirname, '../../dist')));
         app.use('/dist', express.static(path.join(__dirname, '../../dist')));
         app.use('/static', express.static(path.join(__dirname, '../../static')));
-        app.get('/*', (req, res) => res.sendFile(path.join(__dirname, '../../dist/index.html')));
-        app.post('/mail', this.sendamail.bind(this))
+        app.post('/mail', this.sendamail.bind(this));
 
+        var routes = require('./api/gallery'); //importing route
+        routes(app);
+
+
+        app.get('/*', (req, res) => res.sendFile(path.join(__dirname, '../../dist/index.html')));
 
         return this.startServer(app, process.env.PORT || 4000);
     }

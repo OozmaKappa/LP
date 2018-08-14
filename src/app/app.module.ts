@@ -18,7 +18,7 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { HeaderBarComponent } from './components/header-bar/header-bar.component';
-import { LandingPage } from './components/landing-page/landing-page.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { LeftRightComponent } from './components/left-right/left-right.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { MouseWheelDirective } from './directives/mousewheel.directive';
@@ -30,7 +30,7 @@ import { ContactComponent } from './components/contact/contact.component';
         AboutComponent,
         AppComponent,
         HeaderBarComponent,
-        LandingPage,
+        LandingPageComponent,
         LeftRightComponent,
         GalleryComponent,
         ModalComponent,

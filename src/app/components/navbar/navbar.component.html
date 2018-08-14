@@ -17,10 +17,13 @@
                     <!--<a class="level1" [class.active]="gallery && gallery.classList.contains('active')" dropdownToggle>Galleries</a>-->
                     <ul *dropdownMenu role="menu" class="dropdown-menu dropdown-menu-center">
                         <li>
+                            <a #gallery class="level2" routerLink="gallery/Wir_Zwei" routerLinkActive="active" href="" (click)="toggleState()">Wir Zwei</a>
+                        </li>
+                        <li>
                             <a #gallery class="level2" routerLink="gallery/9months" routerLinkActive="active" href="" (click)="toggleState()">9months</a>
                         </li>
                         <li>
-                            <a #gallery class="level2" routerLink="gallery/9months" routerLinkActive="active" href="" (click)="toggleState()">Willkommen im Leben</a>
+                            <a #gallery class="level2" routerLink="gallery/Willkommen_im_Leben" routerLinkActive="active" href="" (click)="toggleState()">Willkommen im Leben</a>
                         </li>
                         <li>
                             <a #gallery class="level2" routerLink="gallery/9months" routerLinkActive="active" href="" (click)="toggleState()">Kinder</a>

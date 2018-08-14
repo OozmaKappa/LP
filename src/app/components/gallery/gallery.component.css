@@ -1,126 +1,143 @@
 .gallery-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gallery-row {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
+  display: flex;
+  max-width: 1152px;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .horizontal-lg,
 .horizontal-sm,
 .vertical,
 .square {
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 }
 
 .horizontal-lg:after,
 .horizontal-sm:after,
 .vertical:after,
 .square:after {
-    display: block;
-    content: '';
+  display: block;
+  content: '';
 }
 
 .horizontal-lg:after {
-    width: 1152px;
-    padding-top: 67%;
-    /* 3:2 ratio */
+  width: 1152px;
+  /* 3:2 ratio */
+  padding-top: 67%;
 }
 
 .horizontal-sm:after {
-    width: 768px;
-    padding-top: 67%;
+  width: 768px;
+  padding-top: 67%;
 }
 
 .vertical:after {
-    width: 384px;
+  width: 384px;
+  /* 3:2 ratio? */
+  padding-top: 148%;
 }
 
 .square:after {
-    width: 576px;
-    padding-top: 100%;
+  width: 576px;
+  padding-top: 100%;
 }
 
 
 /* Medium Devices, Desktops */
 
 @media only screen and (max-width: 1200px) {
-    .horizontal-lg:after {
-        width: 968px;
-    }
-    .horizontal-sm:after {
-        width: 646px;
-    }
-    .vertical:after {
-        width: 322px;
-    }
-    .square:after {
-        width: 484px;
-    }
+  .horizontal-lg:after {
+    width: 968px;
+  }
+
+  .horizontal-sm:after {
+    width: 646px;
+  }
+
+  .vertical:after {
+    width: 322px;
+  }
+
+  .square:after {
+    width: 484px;
+  }
 }
 
 @media only screen and (max-width: 992px) {
-    .horizontal-lg:after {
-        width: 744px;
-    }
-    .horizontal-sm:after {
-        width: 496px;
-    }
-    .vertical:after {
-        width: 248px;
-        padding-top: 150%;
-    }
-    .square:after {
-        width: 377px;
-    }
+  .horizontal-lg:after {
+    width: 744px;
+  }
+
+  .horizontal-sm:after {
+    width: 496px;
+  }
+
+  .vertical:after {
+    width: 248px;
+    padding-top: 150%;
+  }
+
+  .square:after {
+    width: 377px;
+  }
 }
 
 
 /* Small Devices, Tablets */
 
 @media only screen and (max-width: 768px) {
-    .horizontal-lg:after {
-        width: 90vw;
-    }
-    .horizontal-sm:after {
-        width: 90vw;
-    }
-    .vertical:after {
-        width: 90vw;
-        padding-top: 150%;
-    }
-    .square:after {
-        width: 90vw;
-    }
-    .gallery-row {
-        flex-direction: column;
-    }
+  .horizontal-lg:after {
+    width: 90vw;
+  }
+
+  .horizontal-sm:after {
+    width: 90vw;
+  }
+
+  .vertical:after {
+    width: 90vw;
+    padding-top: 150%;
+  }
+
+  .square:after {
+    width: 90vw;
+  }
+
+  .gallery-row {
+    flex-direction: column;
+  }
 }
 
 
 /*http://stackoverflow.com/questions/12121090/responsively-change-div-size-keeping-aspect-ratio*/
 
-.horizontal-sm {}
+.horizontal-sm {
+}
 
-.vertical {}
+.vertical {
+}
 
-.square {}
+.square {
+}
 
 .image {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-position: right bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 10px
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-position: right bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 10px;
 }
 
 

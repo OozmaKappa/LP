@@ -1,21 +1,26 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'landing-page',
-    template: '<div><left-right [content]="content"></left-right></div>',
+    selector: 'app-landing-page',
+    template: '<div><app-left-right [content]="content"></app-left-right></div>',
     styleUrls: ['./landing-page.component.css'],
 })
-export class LandingPage {
+export class LandingPageComponent {
     content = [{
+        title: 'Wir Zwei',
+        imageUrl: 'assets/WirZwei1.png',
+        description: `„A grand adventure is about to begin...“`,
+        route: '/gallery/Wir_Zwei'
+    }, {
         title: '9 Months',
         imageUrl: 'assets/9months1.jpg',
         description: `„A grand adventure is about to begin...“`,
         route: '/gallery/9months'
     }, {
-        title: 'Newborn',
+        title: 'Willkommen im Leben',
         imageUrl: 'assets/newborn1.jpg',
         description: `We take photos as a return ticket to a moment otherwise gone. Katie Thurmes`,
-        route: '/gallery/9months'
+        route: '/gallery/Willkommen_im_Leben'
     }, {
         title: 'Children',
         imageUrl: 'assets/children1.jpg',

@@ -1,7 +1,17 @@
-<div class="gallery-container">
+<span *ngIf="images">
+    <div class="gallery-container">
+        <div class="gallery-row">
+            <div [ngClass]="getImageClass(image)" *ngFor="let image of images">
+                <div *ngIf="galleryName" class="image" [ngStyle]="{ 'background-image': 'url(assets/'+galleryName+'/' + image + ')' }">
+                </div>
+            </div>
+        </div>
+    </div>
+</span>
+<!-- <div class="gallery-container">
   <div class="gallery-row">
     <div class="horizontal-lg">
-      <div *ngIf="galleryName" class="image" [ngStyle]="{ 'background-image': 'url(assets/'+galleryName+'/'+galleryName+ '_0.jpg)'}">
+      <div *ngIf="galleryName" class="image" [ngStyle]="{ 'background-image': 'url(assets/'+galleryName+'/Leben_Pur_Fotografie_1200_01_04_Q_L'+galleryName+ '_0.jpg)'}">
       </div>
     </div>
   </div>
@@ -25,4 +35,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
