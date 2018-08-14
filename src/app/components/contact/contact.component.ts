@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Http, Response, Headers } from '@angular/http'
+import { Http } from '@angular/http'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
     selector: 'app-contact',
