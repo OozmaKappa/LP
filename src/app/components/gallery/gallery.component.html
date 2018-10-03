@@ -1,38 +1,8 @@
 <span *ngIf="images">
     <div class="gallery-container">
-        <div class="gallery-row">
-            <div [ngClass]="getImageClass(image)" *ngFor="let image of images">
-                <div *ngIf="galleryName" class="image" [ngStyle]="{ 'background-image': 'url(assets/'+galleryName+'/' + image + ')' }">
-                </div>
+        <div [ngClass]="getImageClass(image)" *ngFor="let image of images">
+            <div *ngIf="galleryName" class="image" [ngStyle]="{ 'background-image': 'url(assets/'+galleryName+'/' + image + ')' }">
             </div>
         </div>
     </div>
 </span>
-<!-- <div class="gallery-container">
-  <div class="gallery-row">
-    <div class="horizontal-lg">
-      <div *ngIf="galleryName" class="image" [ngStyle]="{ 'background-image': 'url(assets/'+galleryName+'/Leben_Pur_Fotografie_1200_01_04_Q_L'+galleryName+ '_0.jpg)'}">
-      </div>
-    </div>
-  </div>
-  <div class="gallery-row">
-    <div class="square">
-      <div *ngIf="galleryName" class="image" [ngStyle]="{ 'background-image': 'url(assets/'+galleryName+'/'+galleryName+ '_0.jpg)'}">
-      </div>
-    </div>
-    <div class="square">
-      <div *ngIf="galleryName" class="image" [ngStyle]="{ 'background-image': 'url(assets/'+galleryName+'/'+galleryName+ '_0.jpg)'}">
-      </div>
-    </div>
-  </div>
-  <div class="gallery-row">
-    <div class="horizontal-sm">
-      <div *ngIf="galleryName" class="image" [ngStyle]="{ 'background-image': 'url(assets/'+galleryName+'/'+galleryName+ '_0.jpg)'}">
-      </div>
-    </div>
-    <div class="vertical">
-      <div *ngIf="galleryName" class="image" [ngStyle]="{ 'background-image': 'url(assets/'+galleryName+'/'+galleryName+ '_0.jpg)'}">
-      </div>
-    </div>
-  </div>
-</div> -->
